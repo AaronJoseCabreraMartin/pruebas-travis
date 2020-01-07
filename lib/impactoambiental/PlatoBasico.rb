@@ -5,8 +5,8 @@ class PlatoBasico
   # Constructor de la clase PlatoBasico
   def initialize( nombreplato, lista = nil, cantidades = [], &bloque )
     @nombreplato = nombreplato
-    # if block_given?
-    if lista == nil and cantidades == []
+    if block_given?
+    # if lista == nil and cantidades == []
       if bloque.arity == 1
         yield self
       else

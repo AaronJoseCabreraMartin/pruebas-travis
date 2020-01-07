@@ -551,7 +551,7 @@ RSpec.describe Impactoambiental do
           componente  :descripcion => "Papas pequeñas",
                       :precio => 1.75
           componente  :descripcion => "Refrescos de lata",
-                      :precio => 1.50
+                      :precio => 1.50 
           precio      7.50
         end)
         menu = Menu.new("Combinado no. 1") do
