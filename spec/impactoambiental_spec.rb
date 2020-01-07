@@ -55,66 +55,67 @@ RSpec.describe Impactoambiental do
     @lista2 = Lista.new(@nodo15, nil)
 
     ########### pruebas listas de platos ###########
-    # @platoespañol = Lista.new( @lentejas, @carnedevaca )
-    # @platoespañol.insert_tail(@cerdo)
-    # @platoespañol.insert_tail(@cerveza)
-    # @lentejascompuestas = Plato.new("lentejas compuestas y cerveza", @platoespañol, [250,25,75,100])
-    #
-    # @plato2español = Lista.new(@cerdo,@huevos)
-    # @plato2español.insert_tail(@queso)
-    # @plato2español.insert_tail(@pollo)
-    # @plato2español.insert_tail(@cafe)
-    # @huevosestrellados = Plato.new("huevos estrellados y cafe", @plato2español, [150,200,125,85,50])
-    #
-    # @plato3español = Lista.new(@lechedevaca,@huevos)
-    # @plato3español.insert_tail(@queso)
-    # @plato3español.insert_tail(@cafe)
-    # @tarta = Plato.new("tarta", @plato3español, [250,60,125,85])
-    #
-    # @dietaespañola = Lista.new(@lentejascompuestas, @huevosestrellados)
-    # @dietaespañola.insert_tail(@tarta)
-    #
-    # @platovasco = Lista.new(@carnedevaca,@cerdo)
-    # @platovasco.insert_tail(@cerveza)
-    # @carnevasca = Plato.new("carnevasca",@platovasco,[250,200,75])
-    #
-    # @plato2vasco = Lista.new(@camarones,@huevos)
-    # @plato2vasco.insert_tail(@salmon)
-    # @pescadovasco = Plato.new("pescado vasco",@plato2vasco,[124,56,89])
-    #
-    # @dietavasca = Lista.new(@carnevasca,@pescadovasco)
-    #
-    #
-    # @platovegetariano = Lista.new(@huevos,@queso)
-    # @platovegetariano.insert_tail(@cerveza)
-    # @vegetariano = Plato.new("plato vegetariano",@platovegetariano,[150,170,50])
-    #
-    # @platovegeta2riano = Lista.new(@lechedevaca,@tofu)
-    # @platovegeta2riano.insert_tail(@chocolate)
-    # @platovegeta2riano.insert_tail(@nuez)
-    # @vegeta2riano = Plato.new("plato vegetariano",@platovegeta2riano,[65,147,50,72])
-    #
-    # @dietavegetariana = Lista.new(@vegetariano,@vegeta2riano)
-    #
-    # @platovetaliano = Lista.new(@nuez,@tofu)
-    # @platovetaliano.insert_tail(@cerveza)
-    # @vegetaliano = Plato.new("plato vegetaliano",@platovetaliano,[130,200,50])
-    # @platovetaliano2 = Lista.new(@cafe,@lentejas)
-    # @vegetaliano2 = Plato.new("plato vegetaliano2",@platovetaliano2,[215,5])
-    #
-    # @dietavetaliana = Lista.new(@vegetaliano,@vegetaliano2)
-    #
-    # @platocarne = Lista.new(@carnedecordero,@carnedevaca)
-    # @platocarne.insert_tail(@cerveza)
-    # @platocarne.insert_tail(@queso)
-    # @carnivora = Plato.new("plato carnivoro",@platocarne,[290,190,75,60])
-    #
-    # @platocarne2 = Lista.new(@cerdo,@pollo)
-    # @platocarne2.insert_tail(@cafe)
-    # @platocarne2.insert_tail(@salmon)
-    # @carnivora2 = Plato.new("plato carnivoro2",@platocarne2,[400,300,34,19])
-    #
-    # @dietalocuraporlacarne = Lista.new(@carnivora,@carnivora2)
+    @platoespañol = Lista.new( @lentejas, @carnedevaca )
+    @platoespañol.insert_tail(@cerdo)
+    @platoespañol.insert_tail(@cerveza)
+    @lentejascompuestas = Plato.new("lentejas compuestas y cerveza", @platoespañol, [250,25,75,100])
+
+    @plato2español = Lista.new(@cerdo,@huevos)
+    @plato2español.insert_tail(@queso)
+    @plato2español.insert_tail(@pollo)
+    @plato2español.insert_tail(@cafe)
+    @huevosestrellados = Plato.new("huevos estrellados y cafe", @plato2español, [150,200,125,85,50])
+
+    @plato3español = Lista.new(@lechedevaca,@huevos)
+    @plato3español.insert_tail(@queso)
+    @plato3español.insert_tail(@cafe)
+    @tarta = Plato.new("tarta", @plato3español, [250,60,125,85])
+
+    @dietaespañola = Lista.new(@lentejascompuestas, @huevosestrellados)
+    @dietaespañola.insert_tail(@tarta)
+
+    @platovasco = Lista.new(@carnedevaca,@cerdo)
+    @platovasco.insert_tail(@cerveza)
+    @carnevasca = Plato.new("carnevasca",@platovasco,[250,200,75])
+
+    @plato2vasco = Lista.new(@camarones,@huevos)
+    @plato2vasco.insert_tail(@salmon)
+    @pescadovasco = Plato.new("pescado vasco",@plato2vasco,[124,56,89])
+
+    @dietavasca = Lista.new(@carnevasca,@pescadovasco)
+
+
+    @platovegetariano = Lista.new(@huevos,@queso)
+    @platovegetariano.insert_tail(@cerveza)
+    @vegetariano = Plato.new("plato vegetariano",@platovegetariano,[150,170,50])
+
+    @platovegeta2riano = Lista.new(@lechedevaca,@tofu)
+    @platovegeta2riano.insert_tail(@chocolate)
+    @platovegeta2riano.insert_tail(@nuez)
+    @vegeta2riano = Plato.new("plato vegetariano",@platovegeta2riano,[65,147,50,72])
+
+
+    @dietavegetariana = Lista.new(@vegetariano,@vegeta2riano)
+
+    @platovetaliano = Lista.new(@nuez,@tofu)
+    @platovetaliano.insert_tail(@cerveza)
+    @vegetaliano = Plato.new("plato vegetaliano",@platovetaliano,[130,200,50])
+    @platovetaliano2 = Lista.new(@cafe,@lentejas)
+    @vegetaliano2 = Plato.new("plato vegetaliano2",@platovetaliano2,[215,5])
+
+    @dietavetaliana = Lista.new(@vegetaliano,@vegetaliano2)
+
+    @platocarne = Lista.new(@carnedecordero,@carnedevaca)
+    @platocarne.insert_tail(@cerveza)
+    @platocarne.insert_tail(@queso)
+    @carnivora = Plato.new("plato carnivoro",@platocarne,[290,190,75,60])
+
+    @platocarne2 = Lista.new(@cerdo,@pollo)
+    @platocarne2.insert_tail(@cafe)
+    @platocarne2.insert_tail(@salmon)
+    @carnivora2 = Plato.new("plato carnivoro2",@platocarne2,[400,300,34,19])
+
+    @dietalocuraporlacarne = Lista.new(@carnivora,@carnivora2)
 	end
 
 
@@ -368,79 +369,79 @@ RSpec.describe Impactoambiental do
     end
 
     describe "clase PlatoBasico" do
-      # it "Tiene constructor" do
-      #   platoespañol = Lista.new( @lentejas, @carnedevaca )
-      #   platoespañol.insert_tail(@cerdo)
-      #   platoespañol.insert_tail(@cerveza)
-      #   expect(PlatoBasico.new("platoespañol", platoespañol, [250,25,75,100]))
-      # end
-      # it "tiene los getters" do
-      #   platoespañol = Lista.new( @lentejas, @carnedevaca )
-      #   platoespañol.insert_tail(@cerdo)
-      #   platoespañol.insert_tail(@cerveza)
-      #   platoBespañol = PlatoBasico.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
-      #   expect(platoBespañol.nombreplato).to eq("lentejas compuestas y cerveza")
-      #   expect(platoBespañol.ingredientes).to eq(platoespañol)
-      #   expect(platoBespañol.cantidades).to eq([250,25,75,100])
-      #   expect(platoBespañol.proteinas).to eq([72.8456, 6.5406, 19.9938, 0.62])
-      #   expect(platoBespañol.carbohidratos).to eq([97.3054, 0.0, 0.0, 2.6946])
-      #   expect(platoBespañol.lipidos).to eq([38.8889, 8.6111, 52.5, 0.0])
-      #   expect(platoBespañol.valor_energetico).to eq(93800.0)
-      # end
-      #
-      # it "tiene salida formateada" do
-      #   platoespañol = Lista.new( @lentejas, @carnedevaca )
-      #   platoespañol.insert_tail(@cerdo)
-      #   platoespañol.insert_tail(@cerveza)
-      #   platoBespañol = PlatoBasico.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
-      #   expect(platoBespañol.to_s)
-      # end
+      it "Tiene constructor" do
+        platoespañol = Lista.new( @lentejas, @carnedevaca )
+        platoespañol.insert_tail(@cerdo)
+        platoespañol.insert_tail(@cerveza)
+        expect(PlatoBasico.new("platoespañol", platoespañol, [250,25,75,100]))
+      end
+      it "tiene los getters" do
+        platoespañol = Lista.new( @lentejas, @carnedevaca )
+        platoespañol.insert_tail(@cerdo)
+        platoespañol.insert_tail(@cerveza)
+        platoBespañol = PlatoBasico.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
+        expect(platoBespañol.nombreplato).to eq("lentejas compuestas y cerveza")
+        expect(platoBespañol.ingredientes).to eq(platoespañol)
+        expect(platoBespañol.cantidades).to eq([250,25,75,100])
+        expect(platoBespañol.proteinas).to eq([72.8456, 6.5406, 19.9938, 0.62])
+        expect(platoBespañol.carbohidratos).to eq([97.3054, 0.0, 0.0, 2.6946])
+        expect(platoBespañol.lipidos).to eq([38.8889, 8.6111, 52.5, 0.0])
+        expect(platoBespañol.valor_energetico).to eq(93800.0)
+      end
+
+      it "tiene salida formateada" do
+        platoespañol = Lista.new( @lentejas, @carnedevaca )
+        platoespañol.insert_tail(@cerdo)
+        platoespañol.insert_tail(@cerveza)
+        platoBespañol = PlatoBasico.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
+        expect(platoBespañol.to_s)
+      end
     end
     describe "clase Plato" do
-      # it "hereda de la clase PlatoBasico" do
-      #   platoespañol = Lista.new( @lentejas, @carnedevaca )
-      #   platoespañol.insert_tail(@cerdo)
-      #   platoespañol.insert_tail(@cerveza)
-      #   platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
-      #   expect(Plato.superclass).to eq(PlatoBasico)
-      #   expect(platoBespañol.is_a?Object).to eq(true)
-      #   expect(platoBespañol.is_a?PlatoBasico).to eq(true)
-      # end
-      #
-      # it "tiene get kgco2eq y get m2anio" do
-      #   platoespañol = Lista.new( @lentejas, @carnedevaca )
-      #   platoespañol.insert_tail(@cerdo)
-      #   platoespañol.insert_tail(@cerveza)
-      #   platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
-      #
-      #   expect(platoBespañol.kgco2eq).to eq(1944.0)
-      #   expect(platoBespañol.m2anio).to eq(5797.0)
-      # end
-      #
-      # it "tiene salida formateada" do
-      #   platoespañol = Lista.new( @lentejas, @carnedevaca )
-      #   platoespañol.insert_tail(@cerdo)
-      #   platoespañol.insert_tail(@cerveza)
-      #   platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
-      #   platoBespañol2 = PlatoBasico.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
-      #
-      #   expect(platoBespañol.to_s != platoBespañol2.to_s ).to eq(true)
-      # end
-      # it "Es comparable tiene el <=> implementado" do
-      #   platoespañol = Lista.new( @lentejas, @carnedevaca )
-      #   platoespañol.insert_tail(@cerdo)
-      #   platoespañol.insert_tail(@cerveza)
-      #   platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
-      #   platodecarne = Lista.new( @carnedevaca, @carnedecordero )
-      #   platodecarne.insert_tail(@cerdo)
-      #   platodecarne.insert_tail(@pollo)
-      #   platodecarne.insert_tail(@queso)
-      #   platoBdecarne = Plato.new("carne variada con queso", platodecarne, [100,45,85,115,20])
-      #   expect(platoBespañol == platoBdecarne).to eq(false)
-      #   expect(platoBespañol > platoBdecarne).to eq(true)
-      #   expect(platoBespañol < platoBdecarne).to eq(false)
-      #   expect(platoBespañol != platoBdecarne).to eq(true)
-      # end
+      it "hereda de la clase PlatoBasico" do
+        platoespañol = Lista.new( @lentejas, @carnedevaca )
+        platoespañol.insert_tail(@cerdo)
+        platoespañol.insert_tail(@cerveza)
+        platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
+        expect(Plato.superclass).to eq(PlatoBasico)
+        expect(platoBespañol.is_a?Object).to eq(true)
+        expect(platoBespañol.is_a?PlatoBasico).to eq(true)
+      end
+
+      it "tiene get kgco2eq y get m2anio" do
+        platoespañol = Lista.new( @lentejas, @carnedevaca )
+        platoespañol.insert_tail(@cerdo)
+        platoespañol.insert_tail(@cerveza)
+        platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
+
+        expect(platoBespañol.kgco2eq).to eq(1944.0)
+        expect(platoBespañol.m2anio).to eq(5797.0)
+      end
+
+      it "tiene salida formateada" do
+        platoespañol = Lista.new( @lentejas, @carnedevaca )
+        platoespañol.insert_tail(@cerdo)
+        platoespañol.insert_tail(@cerveza)
+        platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
+        platoBespañol2 = PlatoBasico.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
+
+        expect(platoBespañol.to_s != platoBespañol2.to_s ).to eq(true)
+      end
+      it "Es comparable tiene el <=> implementado" do
+        platoespañol = Lista.new( @lentejas, @carnedevaca )
+        platoespañol.insert_tail(@cerdo)
+        platoespañol.insert_tail(@cerveza)
+        platoBespañol = Plato.new("lentejas compuestas y cerveza", platoespañol, [250,25,75,100])
+        platodecarne = Lista.new( @carnedevaca, @carnedecordero )
+        platodecarne.insert_tail(@cerdo)
+        platodecarne.insert_tail(@pollo)
+        platodecarne.insert_tail(@queso)
+        platoBdecarne = Plato.new("carne variada con queso", platodecarne, [100,45,85,115,20])
+        expect(platoBespañol == platoBdecarne).to eq(false)
+        expect(platoBespañol > platoBdecarne).to eq(false)
+        expect(platoBespañol < platoBdecarne).to eq(true)
+        expect(platoBespañol != platoBdecarne).to eq(true)
+      end
     end
   end
     describe "dietas compuestas por platos" do
@@ -491,34 +492,34 @@ RSpec.describe Impactoambiental do
 
     describe "menu" do
       it "tiene los gets" do
-        # expect(@lentejascompuestas.huella_energetica).to eq(23450.0)
-        # expect(@lentejascompuestas.huella_de_carbono).to eq(486.0)
-        # expect(@lentejascompuestas.indicador_huella_ambiental).to eq(1)
-        # expect(@lentejascompuestas.indicador_huella_energetica).to eq(3)
-        # expect(@lentejascompuestas.indicador_huella_nutricional).to eq(2)
+        expect(@lentejascompuestas.huella_energetica).to eq(23450.0)
+        expect(@lentejascompuestas.huella_de_carbono).to eq(486.0)
+        expect(@lentejascompuestas.indicador_huella_ambiental).to eq(1)
+        expect(@lentejascompuestas.indicador_huella_energetica).to eq(3)
+        expect(@lentejascompuestas.indicador_huella_nutricional).to eq(2)
       end
 
       it "metodos avanzados" do
-        # menu1 = [@lentejascompuestas, @huevosestrellados, @carnevasca]
-        # precios = [ 7, 5, 3.5 ]
-        #
-        # expect(menu1.max).to eq(@carnevasca)
-        # expect(indicador_huella_nutricional(menu1)).to eq(2)
-        # expect(precios(menu1,precios)).to eq([10.5, 7.5, 5.25])
-        #
-        # menu2 = [ @carnivora, @carnivora2 ]
-        # precios2 = [ 13, 11.5 ]
-        #
-        # expect(menu2.max).to eq(@carnivora)
-        # expect(indicador_huella_nutricional(menu2)).to eq(3)
-        # expect(precios(menu2,precios2)).to eq([26, 23])
-        #
-        # menu3 = [@vegetaliano, @vegetaliano2]
-        # precios = [ 7, 3.5 ]
-        #
-        # expect(menu3.max).to eq(@vegetaliano)
-        # expect(indicador_huella_nutricional(menu3)).to eq(1)
-        # expect(precios(menu3,precios)).to eq([7.7, 3.85])
+        menu1 = [@lentejascompuestas, @huevosestrellados, @carnevasca]
+        precios = [ 7, 5, 3.5 ]
+
+        expect(menu1.max).to eq(@carnevasca)
+        expect(indicador_huella_nutricional(menu1)).to eq(2)
+        expect(precios(menu1,precios)).to eq([10.5, 7.5, 5.25])
+
+        menu2 = [ @carnivora, @carnivora2 ]
+        precios2 = [ 13, 11.5 ]
+
+        expect(menu2.max).to eq(@carnivora)
+        expect(indicador_huella_nutricional(menu2)).to eq(3)
+        expect(precios(menu2,precios2)).to eq([26, 23])
+
+        menu3 = [@vegetaliano, @vegetaliano2]
+        precios = [ 7, 3.5 ]
+
+        expect(menu3.max).to eq(@vegetaliano)
+        expect(indicador_huella_nutricional(menu3)).to eq(1)
+        expect(precios(menu3,precios)).to eq([7.7, 3.85])
       end
     end
 
@@ -539,7 +540,7 @@ RSpec.describe Impactoambiental do
           alimento :descripcion => "huevo",
                    :gramos => 20
         end
-        expect( plato.to_s ).to eq("Nombre: Hamburguesa especial de la casa\nTipo de plato: Hamburguesa\nIngredientes: [ carne de vaca, huevo ]\nProteinas: 89.0295% 10.9705% \nCarbohidratos: 0.0% 100.0% \nLipidos: 58.4906% 41.5094% \nValor Energetico: 14338.000000000002 cal\nImpacto Ambiental: 5084.0 kgco2 y 16514.0 m2anio")
+        expect( plato.to_s ).to eq("Nombre: Hamburguesa especial de la casa\nTipo de plato: \nIngredientes: [ carne de vaca, huevo ]\nProteinas: 89.0295% 10.9705% \nCarbohidratos: 0.0% 100.0% \nLipidos: 58.4906% 41.5094% \nValor Energetico: 14338.000000000002 cal\nImpacto Ambiental: 5084.0 kgco2 y 16514.0 m2anio")
       end
 
       it "menu" do

@@ -3,48 +3,29 @@ class PlatoBasico
   attr_reader :tipoplato, :nombreplato, :ingredientes, :cantidades, :proteinas, :carbohidratos, :lipidos, :valor_energetico, :huella_de_carbono, :energia
 
   # Constructor de la clase PlatoBasico
-  # def initialize( nombreplato, lista = nil , cantidades = [] )
-  #   @nombreplato = nombreplato
-  #   # if block_given?
-  #   # if cantidades == nil
-  #   if cantidades == []
-  #     bloque = makeproc(lista)
-  #     if bloque.arity == 1
-  #       yield self
-  #     else
-  #       instance_eval( &bloque )
-  #     end
-  #   else
-  #     if lista.instance_of? Lista
-  #       @ingredientes,@numeroplatos = lista, lista.nodos
-  #       if cantidades.instance_of? Array
-  #         @cantidades = cantidades
-  #         raise "Error en las cantidades de cada alimento" unless @cantidades.size == lista.nodos
-  #       else
-  #         @cantidades = Array.zero(lista.nodos)
-  #       end
-  #     else
-  #       raise "Error, se debe pasar una lista o un alimento" unless lista.instance_of? Nodo
-  #       @ingredientes = Lista.new(lista)
-  #       @cantidades = cantidades
-  #       raise "Error en las cantidades de cada alimento" unless @cantidades.size == 1
-  #     end
-  #   end
-  #   @proteinas = calcular("proteinas")
-  #   @carbohidratos = calcular("carbohidratos")
-  #   @lipidos = calcular("lipidos")
-  #   @valor_energetico = calcular("valor_energetico")
-  #   @energia = @valor_energetico / lista.nodos
-  #   @huella_de_carbono = calcular("kgco2eq") / lista.nodos
-  # end
-
-  def initialize( tipoplato, &bloque )
-    @tipoplato = tipoplato
-    if block_given?
+  def initialize( nombreplato, lista = nil, cantidades = [], &bloque )
+    @nombreplato = nombreplato
+    # if block_given?
+    if lista == nil and cantidades == []
       if bloque.arity == 1
         yield self
       else
         instance_eval( &bloque )
+      end
+    else
+      if lista.instance_of? Lista
+        @ingredientes,@numeroplatos = lista, lista.nodos
+        if cantidades.instance_of? Array
+          @cantidades = cantidades
+          raise "Error en las cantidades de cada alimento" unless @cantidades.size == lista.nodos
+        else
+          @cantidades = Array.zero(lista.nodos)
+        end
+      else
+        raise "Error, se debe pasar una lista o un alimento" unless lista.instance_of? Nodo
+        @ingredientes = Lista.new(lista)
+        @cantidades = cantidades
+        raise "Error en las cantidades de cada alimento" unless @cantidades.size == 1
       end
     end
     @proteinas = calcular("proteinas")
@@ -54,6 +35,7 @@ class PlatoBasico
     @energia = @valor_energetico / @ingredientes.nodos
     @huella_de_carbono = calcular("kgco2eq") / @ingredientes.nodos
   end
+
 
   # Es un metodo para calcular el valor energetico, los kgco2eq, las proteinas, los carbohidratos y los lipidos totales del PlatoBasico
   def calcular(elemento)
