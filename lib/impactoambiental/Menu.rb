@@ -44,8 +44,8 @@ class Menu
     string += "\nHuella ambiental del menu: #{kgco2eq} kgco2eq, #{m2anio} m2anio\n"
     string += "Precio del menu:#{@precio}€"
   end
-#falta hacer que no sea solo guardando el nombre sino que guarde el plato como tal
-#tambien falta travis y coveralls
+
+
   private def platos ( nombre )
     if nombre == "Hamburguesa especial de la casa"
       plato = Plato.new("Hamburguesa") do
