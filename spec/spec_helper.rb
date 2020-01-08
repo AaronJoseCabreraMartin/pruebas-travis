@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "impactoambiental"
-require "coveralls"
+
+require 'coveralls'
 Coveralls.wear!
 
 RSpec.configure do |config|
